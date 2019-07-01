@@ -15,6 +15,6 @@ public class Microwave extends Device {
     }
 
     public String toString() {
-        return "- Microwave {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + "$ }";
+        return "- Microwave {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + " BYN}";
     }
 }

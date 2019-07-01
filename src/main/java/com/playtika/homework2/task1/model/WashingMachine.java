@@ -15,6 +15,6 @@ public class WashingMachine extends Device {
     }
 
     public String toString() {
-        return "- Washing Machine {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + "$ }";
+        return "- Washing Machine {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + " BYN}";
     }
 }

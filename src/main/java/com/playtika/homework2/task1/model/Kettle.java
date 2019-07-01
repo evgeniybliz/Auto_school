@@ -15,6 +15,6 @@ public class Kettle extends Device {
     }
 
     public String toString() {
-        return "- Kettle {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + "$ }";
+        return "- Kettle {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + " BYN}";
     }
 }

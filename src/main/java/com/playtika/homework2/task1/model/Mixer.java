@@ -15,6 +15,6 @@ public class Mixer extends Device {
     }
 
     public String toString() {
-        return "- Mixer {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + "$ }";
+        return "- Mixer {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + " BYN}";
     }
 }

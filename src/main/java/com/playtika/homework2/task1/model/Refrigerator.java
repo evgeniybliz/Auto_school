@@ -15,6 +15,6 @@ public class Refrigerator extends Device {
     }
 
     public String toString() {
-        return "- Regrigirator {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + "$ }";
+        return "- Refrigerator {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + " BYN}";
     }
 }
