@@ -15,6 +15,6 @@ public class Oven extends Device {
     }
 
     public String toString() {
-        return "- Oven {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + "$ }";
+        return "- Oven {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + " BYN}";
     }
 }

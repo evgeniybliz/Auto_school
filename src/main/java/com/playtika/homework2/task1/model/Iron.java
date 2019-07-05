@@ -13,6 +13,6 @@ public class Iron extends Device {
     }
 
     public String toString() {
-        return "- Iron {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + "$ }";
+        return "- Iron {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + " BYN}";
     }
 }

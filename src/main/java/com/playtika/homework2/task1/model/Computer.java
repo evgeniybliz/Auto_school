@@ -15,6 +15,6 @@ public class Computer extends Device {
     }
 
     public String toString() {
-        return "- Computer {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + "$ }";
+        return "- Computer {Power: " + this.getPower() + "W, " + "Cost: " + this.getCost() + " BYN}";
     }
 }
