@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="run">
+    <listeners>
+        <listener class-name="com.playtika.homework5.listeners.ExecutionListener" />
+    </listeners>
+    <parameter name="power" value="400" />
+    <test name="test">
+        <classes>
+            <class name="com.playtika.homework5.tests.DemoTest" />
+        </classes>
+    </test>
+</suite>
+
