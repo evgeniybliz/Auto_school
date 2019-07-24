@@ -4,18 +4,19 @@ import com.playtika.homework2.task1.exceptions.NotSupportedTypeInFactory;
 import com.playtika.homework2.task1.factory.DeviceFactory;
 import com.playtika.homework2.task1.model.*;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class DemoWriteAndRead {
-
-    private static final String FILE_FOR_WRITE = "Tasks/src/main/resources/ListOfDevices.txt";
-    private static final String FILE_FOR_READ = "Tasks/src/main/resources/ListOfDevices.txt";
+    private static final String FILE_FOR_WRITE = "src/main/resources/ListOfDevices.txt";
+    private static final String FILE_FOR_READ = "src/main/resources/ListOfDevices.txt";
 
     public static void main(String[] args) throws IOException, NotSupportedTypeInFactory {
         List<Device> devicesForWrite = new ArrayList<>();
@@ -33,7 +34,7 @@ public class DemoWriteAndRead {
     }
 
     // Запись элемнтов массива в файл
-    private static void writeListDevicesToFile(List<Device> devicesForWrite) {
+    public static void writeListDevicesToFile(List<Device> devicesForWrite) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(new File(FILE_FOR_WRITE)));
             for (Device device : devicesForWrite) {
@@ -47,9 +48,9 @@ public class DemoWriteAndRead {
     }
 
     // Чтение данных из файла и создание массива через фабрику с использованием регулярных выражений
-    private static void readListDevicesFromFile() {
+    public static List<Device> readListDevicesFromFile() {
+        List<Device> devicesFromFile = new ArrayList<>();
         try {
-            List<Device> devicesFromFile = new ArrayList<>();
             Scanner sc = new Scanner(new File(FILE_FOR_READ));
             Pattern p = Pattern.compile("(?<=- )(\\w+)\\s\\{Power: (\\d+)W,\\sCost: (\\d+)");
             while (sc.hasNextLine()) {
@@ -63,5 +64,6 @@ public class DemoWriteAndRead {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return devicesFromFile;
     }
 }

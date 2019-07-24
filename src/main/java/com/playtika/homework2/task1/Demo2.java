@@ -35,7 +35,7 @@ public class Demo2 {
         FilterByValues.filterByPowerAndCost(allDevices);
 
         //Поиск прибора по мощности
-        FindByPower.findByPower(allDevices);
+        FindByPower.findByPower(allDevices, 400);
 
         //Получение прибора из коллекции по индексу
         FindByIndex.findByIndex(allDevices);
