@@ -6,21 +6,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.openqa.selenium.remote.BrowserType.CHROME;
-import static org.openqa.selenium.remote.BrowserType.FIREFOX;
-
 public class DriverManager {
 
     private static WebDriver driver = null;
 
-    public static void initDriver(String browserType) {
+    public static void initDriver() {
         if (driver == null) {
-            switch (browserType) {
-                case CHROME:
+            switch (System.getProperty("browser")) {
+                case "chrome":
                     System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
                     driver = new ChromeDriver();
                     break;
-                case FIREFOX:
+                case "firefox":
                     System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
                     driver = new FirefoxDriver();
                     break;
@@ -34,10 +31,6 @@ public class DriverManager {
     public static void quit() {
         driver.quit();
         driver = null;
-    }
-
-    public static void openUrl(String URL) {
-        driver.get(URL);
     }
 
     public static WebDriver getDriver() {
